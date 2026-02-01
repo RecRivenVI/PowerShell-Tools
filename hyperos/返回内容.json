@@ -1,0 +1,17 @@
+{
+    "LatestFullRom": {
+        "type": "fullrom",
+        "device": "shennong",
+        "description": "MIUI\u5237\u673a\u5305",
+        "descriptionUrl": "http:\/\/update.miui.com\/updates\/updateinfo\/OS3.0.4.0.WNBCNXM\/shennong_0_OS3.0.4.0.WNBCNXM_en_b879c7dce97355a9a4b4261e9e3be856.html",
+        "md5": "f0536c2d826b81a8d1f0f7caab25def4",
+        "filename": "shennong_images_OS3.0.4.0.WNBCNXM_20251111.0000.00_16.0_cn_f0536c2d82.tgz",
+        "filesize": "9.3G",
+        "codebase": "16.0",
+        "version": "OS3.0.4.0.WNBCNXM",
+        "baseVersion": "OS3.0.4.0.WNBCNXM"
+    },
+    "MirrorList": [
+        "http:\/\/superota.d.miui.com"
+    ]
+}
