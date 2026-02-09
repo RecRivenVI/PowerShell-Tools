@@ -1,4 +1,4 @@
-Get-ChildItem -Path . -Filter *.iso |
+Get-ChildItem -Path .\* -Include *.iso, *.zip, *.tgz |
 ForEach-Object -Parallel {
     $ZipFile = $_
     $LatestTime = 

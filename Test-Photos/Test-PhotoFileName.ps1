@@ -60,4 +60,4 @@ ForEach-Object -Parallel {
 
 $RenameStatue |
 Sort-Object Name |
-Export-Csv -Path "Test-PhotoFileName_Result.csv" -Encoding UTF8 -NoTypeInformation
+Export-Csv -Path "$PSScriptRoot/Test-PhotoFileName_Result.csv" -Encoding UTF8 -NoTypeInformation

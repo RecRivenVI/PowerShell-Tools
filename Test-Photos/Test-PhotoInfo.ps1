@@ -31,4 +31,4 @@ ForEach-Object -Parallel {
 
 $MiCameraStatue |
 Sort-Object Name |
-Export-Csv -Path "PhotoInfo.csv" -Encoding UTF8 -NoTypeInformation
+Export-Csv -Path "$PSScriptRoot/PhotoInfo.csv" -Encoding UTF8 -NoTypeInformation

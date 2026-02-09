@@ -1,4 +1,4 @@
-$Path = "D:\ISOs\26200.7705.260126-1049.25H2_GE_RELEASE_SVC_PROD3_CLIENTMULTI_X64FRE_ZH-CN.ISO"
+$Path = "G:\ISOs\Microsoft\zh-cn_windows_11_consumer_editions_version_25h2_x64_dvd_0549fc93.iso"
 $image = Mount-DiskImage $Path
 $locate = (Get-Volume -DiskImage $image).DriveLetter
 if (Test-Path "$locate`:\sources\install.wim") {
