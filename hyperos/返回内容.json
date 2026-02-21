@@ -1,15 +1,15 @@
 {
     "LatestFullRom": {
         "type": "fullrom",
-        "device": "shennong",
+        "device": "nabu",
         "description": "MIUI\u5237\u673a\u5305",
-        "descriptionUrl": "http:\/\/update.miui.com\/updates\/updateinfo\/OS3.0.4.0.WNBCNXM\/shennong_0_OS3.0.4.0.WNBCNXM_en_b879c7dce97355a9a4b4261e9e3be856.html",
-        "md5": "f0536c2d826b81a8d1f0f7caab25def4",
-        "filename": "shennong_images_OS3.0.4.0.WNBCNXM_20251111.0000.00_16.0_cn_f0536c2d82.tgz",
-        "filesize": "9.3G",
-        "codebase": "16.0",
-        "version": "OS3.0.4.0.WNBCNXM",
-        "baseVersion": "OS3.0.4.0.WNBCNXM"
+        "descriptionUrl": "http:\/\/update.miui.com\/updates\/updateinfo\/V816.0.3.0.TKXCNXM\/nabu_0_V816.0.3.0.TKXCNXM_en_de5fd519984084661e605b41479b7c01.html",
+        "md5": "ff15a7adfc55be0a38b5c7862ccb23a4",
+        "filename": "nabu_images_OS1.0.3.0.TKXCNXM_20240516.0000.00_13.0_cn_ff15a7adfc.tgz",
+        "filesize": "4.8G",
+        "codebase": "13.0",
+        "version": "V816.0.3.0.TKXCNXM",
+        "baseVersion": "V816.0.3.0.TKXCNXM"
     },
     "MirrorList": [
         "http:\/\/superota.d.miui.com"
