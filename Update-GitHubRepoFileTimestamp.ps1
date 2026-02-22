@@ -9,4 +9,4 @@ ForEach-Object -Parallel {
         $GitObject.LastWriteTime = $LatestTime
     }
     Write-Host $GitObject.Name $GitObject.LastWriteTime
-} -ThrottleLimit 32
+} -ThrottleLimit 8

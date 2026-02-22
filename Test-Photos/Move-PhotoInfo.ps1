@@ -7,4 +7,4 @@ ForEach-Object -Parallel {
     if (-not $XmpMiCamera){
         Move-Item -Path $JpgFile.FullName -Destination "D:\GitHub\PowerShell-Tools\Test-Photos\assetsNoMiCamera"
     }
-} -ThrottleLimit 32
+} -ThrottleLimit 8

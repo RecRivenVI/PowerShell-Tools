@@ -9,7 +9,7 @@ $versions = foreach ($major in 1..9) {
     }
 }
 
-$Throttle = 20   # 并行线程数，可根据 CPU/网络调整
+$Throttle = 8   # 并行线程数，可根据 CPU/网络调整
 
 $versions | ForEach-Object -Parallel {
     $baseUrl = $using:baseUrl

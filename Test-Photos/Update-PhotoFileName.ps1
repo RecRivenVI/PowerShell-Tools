@@ -31,4 +31,4 @@ ForEach-Object -Parallel {
     else {
         Write-Host $JpgFile.Name TIMESTAMP NOT FOUND
     }
-} -ThrottleLimit 32
+} -ThrottleLimit 8

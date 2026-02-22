@@ -17,4 +17,4 @@ ForEach-Object -Parallel {
         $ZipFile.LastWriteTime = $LatestTime
     }
     Write-Host $ZipFile.Name $ZipFile.LastWriteTime
-} -ThrottleLimit 32
+} -ThrottleLimit 8

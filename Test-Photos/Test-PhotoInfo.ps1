@@ -13,6 +13,7 @@ ForEach-Object -Parallel {
     $XmpGCamera           = $XmpData | Select-String -Pattern "XMP-GCamera"
     $XmpdocPhoto          = $XmpData | Select-String -Pattern "docPhoto"
     $XmpMicroVideo        = $XmpData | Select-String -Pattern "MicroVideo"
+    $XmpMotionPhoto       = $XmpData | Select-String -Pattern "MotionPhoto"
     [PSCustomObject]@{
         Name                 = $JpgFile.Name
         ExifDateTimeOriginal = $ExifDateTimeOriginal ? $ExifDateTimeOriginal : "NOT FOUND"
@@ -25,9 +26,10 @@ ForEach-Object -Parallel {
         ExifThumbnailImage   = $ExifThumbnailImage ? "YES" : "NO"
         XmpdocPhoto          = $XmpdocPhoto ? "YES" : "NO"
         XmpMicroVideo        = $XmpMicroVideo ? "YES" : "NO"
+        XmpMotionPhoto       = $XmpMotionPhoto ? "YES" : "NO"
         FullName             = $JpgFile.FullName
     }
-} -ThrottleLimit 32
+} -ThrottleLimit 8
 
 $MiCameraStatue |
 Sort-Object Name |

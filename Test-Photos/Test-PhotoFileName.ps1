@@ -56,7 +56,7 @@ ForEach-Object -Parallel {
             Statue  = "TIMESTAMP NOT FOUND"
         }
     }
-} -ThrottleLimit 32
+} -ThrottleLimit 8
 
 $RenameStatue |
 Sort-Object Name |

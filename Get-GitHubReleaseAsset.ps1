@@ -7,4 +7,4 @@ ForEach-Object -Parallel {
         -R PrismLauncher/PrismLauncher `
         -p 'PrismLauncher-Windows-MSVC-Portable*' `
         --skip-existing
-} -ThrottleLimit 32
+} -ThrottleLimit 8
