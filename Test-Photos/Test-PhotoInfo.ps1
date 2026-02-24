@@ -1,4 +1,4 @@
-$MiCameraStatue = Get-ChildItem -Path "F:\PhotoSync\DCIM\Camera" -Filter *.jpg |
+$MiCameraStatue = Get-ChildItem -Path "F:\PhotoSync\DCIM\CameraMissingMiCameraDUPE" -File |
 ForEach-Object -Parallel {
     $JpgFile              = $_
     $ExifTool             = "D:\Tools\ExifTool\exiftool.exe"

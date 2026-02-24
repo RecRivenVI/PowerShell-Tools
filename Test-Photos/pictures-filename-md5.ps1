@@ -1,4 +1,4 @@
-Get-ChildItem -Path "C:\Users\RavenYin\OneDrive\图片\Touhou Wallpapers" -File |
+Get-ChildItem -Path "C:\Users\RavenYin\Downloads\图片" -File -Recurse |
 ForEach-Object -Parallel {
     $file = $_
     $md5 = (Get-FileHash -LiteralPath $file.FullName -Algorithm MD5).Hash.ToLower()
@@ -7,6 +7,6 @@ ForEach-Object -Parallel {
     }
     else {
         Write-Host "$($file.Name) name need change into $($md5 + $file.Extension)"
-        #Rename-Item -LiteralPath $file.FullName -NewName ($md5 + $file.Extension)
+        Rename-Item -LiteralPath $file.FullName -NewName ($md5 + $file.Extension)
     }
 } -ThrottleLimit 32

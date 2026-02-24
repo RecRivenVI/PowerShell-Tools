@@ -1,28 +1,29 @@
-Get-ChildItem -Path "G:\Backups\PhotoSync\DCIM\CameraX" -File -Recurse |
+Get-ChildItem -Path "F:\PhotoSync\DCIM\CameraDupeTime" -File -Recurse |
 ForEach-Object -Parallel {
     $ExifTool = "D:\Tools\ExifTool\exiftool.exe"
     $JpgFile = $_
     $DateTimeOriginal = & $ExifTool -DateTimeOriginal -s3 $JpgFile.FullName
+    $SubSecTime = & $ExifTool -SubSecTime -s3 $JpgFile.FullName
     $XmpData = & $ExifTool -X $JpgFile.FullName
     $XmpMicroVideo = $XmpData | Select-String -Pattern "MicroVideo" -Quiet
     $XmpMotionPhoto = $XmpData | Select-String -Pattern "MotionPhoto" -Quiet
     if ($DateTimeOriginal) {
         $FormattedDateTimeOriginal = [DateTime]::ParseExact($DateTimeOriginal, "yyyy:MM:dd HH:mm:ss", $null)
         if ($XmpMicroVideo -or $XmpMotionPhoto) {
-            $NewJpgFileName = $FormattedDateTimeOriginal.ToString("'MVIMG_'yyyyMMdd_HHmmss'.jpg'")
+            $NewJpgFileName = $FormattedDateTimeOriginal.ToString("'MVIMG_'yyyyMMdd_HHmmss''")
             if ($NewJpgFileName -ne $JpgFile.Name) {
-                Rename-Item -Path $JpgFile.FullName -NewName $NewJpgFileName
-                Write-Host RENAMED $JpgFile.Name TO $NewJpgFileName 
+                Rename-Item -Path $JpgFile.FullName -NewName ${NewJpgFileName}_${SubSecTime}.jpg
+                Write-Host "RENAMED $($JpgFile.Name) TO ${NewJpgFileName}_${SubSecTime}.jpg"
             }
             else {
                 Write-Host $JpgFile.Name SAME AS $NewJpgFileName, NOT RENAMED
             }
         }
         else {
-            $NewJpgFileName = $FormattedDateTimeOriginal.ToString("'IMG_'yyyyMMdd_HHmmss'.jpg'")
+            $NewJpgFileName = $FormattedDateTimeOriginal.ToString("'IMG_'yyyyMMdd_HHmmss''")
             if ($NewJpgFileName -ne $JpgFile.Name) {
-                Rename-Item -Path $JpgFile.FullName -NewName $NewJpgFileName
-                Write-Host RENAMED $JpgFile.Name TO $NewJpgFileName 
+                Rename-Item -Path $JpgFile.FullName -NewName ${NewJpgFileName}_${SubSecTime}.jpg
+                Write-Host "RENAMED $($JpgFile.Name) TO ${NewJpgFileName}_${SubSecTime}.jpg"
             }
             else {
                 Write-Host $JpgFile.Name SAME AS $NewJpgFileName, NOT RENAMED
