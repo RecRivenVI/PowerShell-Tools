@@ -1,4 +1,4 @@
-Get-ChildItem -Path "C:\Users\RavenYin\Downloads\图片" -File -Recurse |
+Get-ChildItem -Path "C:\Users\RavenYin\Downloads\1" -File -Recurse |
 ForEach-Object -Parallel {
     $file = $_
     $md5 = (Get-FileHash -LiteralPath $file.FullName -Algorithm MD5).Hash.ToLower()
