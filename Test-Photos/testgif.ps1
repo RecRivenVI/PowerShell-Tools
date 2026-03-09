@@ -1,4 +1,4 @@
-Get-ChildItem -Path "C:\Users\RavenYin\OneDrive\图片\动图" -File -Filter *.gif |
+Get-ChildItem -Path "C:\Users\RavenYin\OneDrive\图片\动图" -File |
 ForEach-Object -Parallel {
     $file = $_
     $fs = [System.IO.File]::OpenRead($file.FullName)

@@ -1,0 +1,13 @@
+#com.miHoYo.Nap
+#com.miHoYo.hkrpg
+#com.miHoYo.Yuanshen
+#com.miHoYo.enterprise.NGHSoD
+#com.kurogame.mingchao
+#com.kurogame.haru.hero
+#com.tencent.tmgp.dfm
+#com.hypergryph.arknights
+#com.tencent.nikke
+#com.netease.x19
+#com.cipaishe.wuhua.bilibili
+#com.bilibili.star.bili
+com.hermes.mk
